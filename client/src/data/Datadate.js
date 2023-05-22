@@ -43,11 +43,12 @@ export const DataMonther = Array.from({length: 12}, (_, i) => i + 1)
 
 export const Sitelearn = [
     {
-        id: 1,
+        title: null,
+    },
+    {
         title: "Onsite",
     },
     {
-        id: 2,
         title: "Online",
     }
 ]

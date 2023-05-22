@@ -1,6 +1,6 @@
 import openbook from '../src/image/openbook.png'
 import schedule from '../src/image/schedule.png'
-import { Datadate, DataTime, Sitelearn,DataNumber } from '../src/data/Datadate'
+import { Datadate, DataTime, Sitelearn, DataNumber } from '../src/data/Datadate'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -57,7 +57,7 @@ const Class = () => {
                                     </div>
                                     <input type="text" className='rounded-lg w-[300px] h-[30px] mt-7' onChange={(e) => setNamesubject(e.target.value)} />
                                     <td>
-                                        <select className='rounded-lg w-[300px] h-[30px] mt-7' onChange={(e)=>setClasssite(e.target.value)}>
+                                        <select onChange={(e)=>setClasssite(e.target.value)}>
                                             {Sitelearn.map((item, id) => {
                                                 return (
                                                     <option key={id} value={item.title}>{item.title}</option>
@@ -90,7 +90,7 @@ const Class = () => {
                                         </select>
                                     </td>
                                     <td>
-                                        <select className='rounded-lg w-[300px] h-[30px] mt-7' onChange={(e)=>setMintime(e.target.value)} value={mintime}>
+                                        <select className='rounded-lg w-[300px] h-[30px] mt-7' onChange={(e) => setMintime(e.target.value)} value={mintime}>
                                             {DataNumber.map((item, id) => {
                                                 return (
                                                     <option key={id} value={item}>{item}</option>
