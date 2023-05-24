@@ -62,13 +62,15 @@ while  True :
         # print("datevalue",((daatenow.weekday()+1)%7))
         # print("result",result)
             if result == ((daatenow.weekday()+1)%7) and i['classsite'] == 'Onsite' :
-
                 sendtextClassOnsite()
+                sleep(3600)
             elif  i['day'] == daatenow.strftime('%A') and i['classsite'] == 'Online' :
                 line.sendsticker('11537','52002734')
                 sendtextClassOnline()
+                sleep(3600)
     elif "11" == daatenow.now().strftime('%H') :
         for i in baseURLWork :
             if i['day'] == daatenow.day+1 :
                 massage = '\n' + 'วันพรุ่งนี้คุณมีการบ้านวิชา'+i['namework'] + 'ที่ต้องส่ง' + '\n' + 'เวลา' + str(i['hour']) + ':' + str(i['minute']) + 'นาฬิกานะคะ'
                 line.sendtext(massage)
+                sleep(3600)
